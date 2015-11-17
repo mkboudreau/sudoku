@@ -37,10 +37,11 @@ Works best with a black terminal.
 
 ### Solves the sample file and displays the difficulty
 - Option 1
+    
     ./sudoku < sample
 
 - Option 2
-    cat sample | ./sudoku
+    `cat sample | ./sudoku`
 
 ### Solves the sample file, highlights the solution
     cat sample | ./sudoku -h
