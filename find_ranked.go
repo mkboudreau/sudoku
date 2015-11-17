@@ -4,7 +4,8 @@ import (
 	"sort"
 )
 
-type RankedCoordFinder struct { // slow implementation. using only for visualiza
+// Ranked Coordinate Finder is slower for a given coordinate, but faster in solving an entire board. When backtracking is taken into consideration, it is imperative that the first coordinates attempted have the least number of values available to attempt.
+type RankedCoordFinder struct {
 	board     Board
 	remaining []*Coord
 }
