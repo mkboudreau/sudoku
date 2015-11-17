@@ -14,8 +14,8 @@ Works best with a black terminal.
 
 ## Usage 
 
-### Two Main Modes of Operation
-1. Provide a board 
+### Two Modes of Operation
+1. Provide a board (3 different ways)
     - `./sudoku < sample`
     - `cat sample | ./sudoku`
     - `./sudoku <paste in board>`
@@ -37,12 +37,10 @@ Works best with a black terminal.
 
 ### Solves the sample file and displays the difficulty
 - Option 1
-  
     ./sudoku < sample
 
 - Option 2
-
-  cat sample | ./sudoku
+    cat sample | ./sudoku
 
 ### Solves the sample file, highlights the solution
     cat sample | ./sudoku -h
