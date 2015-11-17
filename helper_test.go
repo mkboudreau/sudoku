@@ -43,6 +43,25 @@ outer:
 
 	return true
 }
+
+func assertBoardNotEqual(b1, b2 Board) bool {
+	return !assertBoardEqual(b1, b2)
+}
+func assertBoardEqual(b1, b2 Board) bool {
+	if len(b1) != len(b2) {
+		return false
+	}
+
+	for x := 0; x < len(b1); x++ {
+		for y := 0; y < len(b1); y++ {
+			if b1[x][y] != b2[x][y] {
+				return false
+			}
+		}
+	}
+
+	return true
+}
 func assertSameCoord(c1 *Coord, c2 *Coord) bool {
 	return c1.x == c2.x && c1.y == c2.y
 }

@@ -274,33 +274,3 @@ func TestCoordXY(t *testing.T) {
 		t.Fail()
 	}
 }
-
-/*
-
-func (board Board) WriteSafe(xy XY, value byte) error {
-	if len(board) <= xy.X() || len(board) <= xy.Y() {
-		return fmt.Errorf("Coordinate %+v is outside the size of the board", xy)
-	}
-	if board[xy.X()][xy.Y()] != 0 {
-		return fmt.Errorf("Cannot overwrite existing value %v with new value %v at coordinate", board[xy.X()][xy.Y()], value, xy)
-	}
-	board[xy.X()][xy.Y()] = value
-	return nil
-}
-
-func (board Board) Conflict() bool {
-	return board.conflictInRows() || board.conflictInCols()
-}
-func (board Board) Clone() Board {
-	newgrid := make([][]byte, len(board))
-	for x := 0; x < len(board); x++ {
-		newrow := make([]byte, len(board))
-		oldrow := board[x]
-		for y := 0; y < len(board); y++ {
-			newrow[y] = oldrow[y]
-		}
-		newgrid[x] = newrow
-	}
-	return Board(newgrid)
-}
-*/
