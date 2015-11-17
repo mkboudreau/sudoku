@@ -12,7 +12,7 @@ import: tools
 tools:
 	go get golang.org/x/tools/cmd/goimports
 clean:
-	rm -f ./sudoku 
+	rm -f ./sudoku ./sudoku.zip
 bench:
 	go test -bench=.
 cover:
@@ -27,3 +27,5 @@ coverfunc:
 	rm -f cover.out
 install: clean deps build
 	go install
+package: clean deps build
+	zip sudoku.zip *.go README.md LICENSE sample Makefile sudoku
