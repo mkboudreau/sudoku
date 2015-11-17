@@ -33,7 +33,7 @@ func (e *ProgressEventHandler) OnAttemptingCoord(board Board, coord XY) {
 func (e *ProgressEventHandler) OnBeforeClearCoord(board Board, coord XY) {}
 func (e *ProgressEventHandler) OnAfterClearCoord(board Board, coord XY)  {}
 func (e *ProgressEventHandler) OnSuccessfulCoord(board Board, coord XY) {
-	e.delay()
+	e.delayShort()
 	e.removeInProgressCoord(coord)
 	e.goodCoords = append(e.goodCoords, CoordXY(coord))
 	//failedCodeSet := NewColorCoordSet([]*Coord{CoordXY(coord)}, StatusFailedColor)
@@ -56,6 +56,9 @@ func (e *ProgressEventHandler) OnFailedCoord(board Board, coord XY) {
 
 func (e *ProgressEventHandler) clearConsole() {
 	e.write(fmt.Sprintf("%v%v", ClearConsole, ResetCursor))
+}
+func (e *ProgressEventHandler) delayShort() {
+	time.Sleep(e.Delay / 4)
 }
 func (e *ProgressEventHandler) delay() {
 	time.Sleep(e.Delay)
