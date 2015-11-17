@@ -1,7 +1,9 @@
 # Sudoku Solver
 ## Go Challenge #8
 
-This program has some fun to it. It has two different approaches to solve the game built in and also will colorize the solution as it is solving it, including showing the backtrackig. Works best with a black terminal.
+This program has some fun to it. It has two different approaches (aka finders) to solve sudoku puzzles and it also will colorize the solution as it is solving it, including showing backtracking. 
+
+Works best with a black terminal.
 
 ## Getting the Program
 
@@ -13,13 +15,13 @@ This program has some fun to it. It has two different approaches to solve the ga
 ## Usage 
 
 ### Two Main Modes of Operation
-1.Provide a board 
-    `./sudoku < sample`
-    `cat sample | ./sudoku`
-    `./sudoku <paste in board>`
+1. Provide a board 
+    - `./sudoku < sample`
+    - `cat sample | ./sudoku`
+    - `./sudoku <paste in board>`
 
 2. Generate a board
-    `./sudoku -g <difficulty>`
+    - `./sudoku -g <difficulty>`
 
 ### Options
     `-h` Highlights the solution
@@ -34,11 +36,13 @@ This program has some fun to it. It has two different approaches to solve the ga
 ## Examples
 
 ### Solves the sample file and displays the difficulty
-Option 1
+- Option 1
+  
     ./sudoku < sample
 
-Option 2
-    cat sample | ./sudoku
+- Option 2
+
+  cat sample | ./sudoku
 
 ### Solves the sample file, highlights the solution
     cat sample | ./sudoku -h
